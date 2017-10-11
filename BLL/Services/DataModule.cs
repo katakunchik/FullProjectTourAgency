@@ -25,8 +25,10 @@ namespace BLL.Services
                 .As<IEFContext>().InstancePerRequest();
             builder.RegisterType<CountryRepository>()
                 .As<ICountryRepository>().InstancePerRequest();
-            builder.RegisterType<CountryService>()
-                .As<ICountryService>().InstancePerRequest();
+            builder.RegisterType<CityRepository>()
+                .As<ICityRepository>().InstancePerRequest();
+            builder.RegisterType<LocationService>()
+                .As<ILocationService>().InstancePerRequest();
             base.Load(builder);
         }
     }

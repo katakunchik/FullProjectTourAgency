@@ -50,12 +50,10 @@
     <Compile Include="DTO\CityModels.cs" />
     <Compile Include="DTO\CountryModels.cs" />
     <Compile Include="DTO\HelperModels.cs" />
-    <Compile Include="Interfaces\ICityService.cs" />
-    <Compile Include="Interfaces\IContryService.cs" />
+    <Compile Include="Interfaces\ILocationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CityService.cs" />
-    <Compile Include="Services\CountryService.cs" />
     <Compile Include="Services\DataModule.cs" />
+    <Compile Include="Services\LocationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
