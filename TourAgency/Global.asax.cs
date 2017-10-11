@@ -12,6 +12,7 @@ namespace TourAgency
     {
         protected void Application_Start()
         {
+            AutofacConfig.ConfigContainer();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
