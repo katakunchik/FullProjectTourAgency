@@ -157,6 +157,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +166,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Content\bootstrap.css" />
+    <Content Include="Areas\Admin\Content\custom.css" />
+    <Content Include="Areas\Admin\Content\font-awesome.css" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\images\1.png" />
+    <Content Include="Areas\Admin\images\2.png" />
+    <Content Include="Areas\Admin\images\3.png" />
+    <Content Include="Areas\Admin\images\4.png" />
+    <Content Include="Areas\Admin\images\find_user.png" />
+    <Content Include="Areas\Admin\Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Scripts\custom.js" />
+    <Content Include="Areas\Admin\Scripts\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Areas\Admin\Scripts\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Areas\Admin\Scripts\dataTables\jquery.dataTables.js" />
+    <Content Include="Areas\Admin\Scripts\jquery-1.10.2.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.metisMenu.js" />
+    <Content Include="Areas\Admin\Scripts\morris\morris-0.4.3.min.css" />
+    <Content Include="Areas\Admin\Scripts\morris\morris.js" />
+    <Content Include="Areas\Admin\Scripts\morris\raphael-2.1.0.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -183,6 +205,20 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Country\Index.cshtml" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Areas\Admin\Views\Country\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Country\Edit.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -217,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
