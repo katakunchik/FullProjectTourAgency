@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourAgency", "TourAgency\TourAgency.csproj", "{17E0D58C-0EED-4F92-A561-431F9CF98019}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{E2B653FB-E48C-4215-9C8D-662BF0E1EA6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{CFF66B61-CD70-447D-8653-43D0628013C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{17E0D58C-0EED-4F92-A561-431F9CF98019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E0D58C-0EED-4F92-A561-431F9CF98019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E0D58C-0EED-4F92-A561-431F9CF98019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B653FB-E48C-4215-9C8D-662BF0E1EA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B653FB-E48C-4215-9C8D-662BF0E1EA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B653FB-E48C-4215-9C8D-662BF0E1EA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B653FB-E48C-4215-9C8D-662BF0E1EA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF66B61-CD70-447D-8653-43D0628013C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF66B61-CD70-447D-8653-43D0628013C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF66B61-CD70-447D-8653-43D0628013C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF66B61-CD70-447D-8653-43D0628013C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
