@@ -35,7 +35,7 @@ namespace BLL.DTO
         public List<SelectItemViewModel> Countries { get; set; }
     }
 
-    public class EditCityViewModel
+    public class CityEditViewModel
     {
         [Display(Name = "Код")]
         public int Id { get; set; }
@@ -49,5 +49,12 @@ namespace BLL.DTO
         [Display(Name = "Країна")]
         public int CountryId { get; set; }
         public List<SelectItemViewModel> Countries { get; set; }
+    }
+
+    public enum CityStatusViewModel
+    {
+        Success = 0,
+        CountryDublicate = 1,
+        Error = 2
     }
 }

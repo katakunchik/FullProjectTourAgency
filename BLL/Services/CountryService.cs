@@ -64,9 +64,7 @@ namespace BLL.Services
                     return CountryStatusViewModel.Success;
                 }
             }
-            catch
-            {                
-            }
+            catch { }
             return CountryStatusViewModel.Error;
         }
 
