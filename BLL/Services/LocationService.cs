@@ -22,17 +22,29 @@ namespace BLL.Services
 
         #region CountryPart
 
-        public IEnumerable<CountryIndexViewModel> Countries()
+        public CountryIndexViewModel Countries(int page)
         {
-            var countries = _countryRepository.GetAllCountries()
-                .Select(c => new CountryIndexViewModel
+            int countItems = 1;
+            int pageNumber = page - 1;
+            var model = new CountryIndexViewModel();
+            model.Countries = _countryRepository
+                .GetAllCountries()
+                .OrderBy(c => c.Id)
+                .Skip(countItems * pageNumber)
+                .Take(countItems)
+                .Select(c => new CountryItemViewModel
                 {
                     Id = c.Id,
                     Name = c.Name,
                     DateCreate = c.DateCreate,
                     Priority = c.Priority
                 });
-            return countries.AsEnumerable();
+
+            int count = _countryRepository.countCountries();
+            model.TotalPages = (int)Math.Ceiling((double)count / countItems);
+            model.CurrentPage = page;
+
+            return model;
         }
 
         public CountryStatusViewModel CountryCreate(CountryCreateViewModel createCountry)

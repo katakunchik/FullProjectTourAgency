@@ -40,6 +40,10 @@ namespace DAL.Repositories
         {
             return _context.Set<City>().SingleOrDefault(c => c.Name==cityName && c.CountryId == countryId);
         }
+        public int countCities()
+        {
+            return GetAllCities().Count();
+        }
 
         public void SaveChange()
         {

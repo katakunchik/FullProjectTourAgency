@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTO
 {
-    public class CountryIndexViewModel
+    public class CountryItemViewModel
     {
         [Display(Name = "Код")]
         public int Id { get; set; }
@@ -17,6 +17,13 @@ namespace BLL.DTO
         public DateTime DateCreate { get; set; }
         [Display(Name = "Пріорітет")]
         public int Priority { get; set; }
+    }
+    public class CountryIndexViewModel
+    {
+        public IEnumerable<CountryItemViewModel> Countries { get; set; }
+        public int TotalPages { get; set; }
+        public int  CurrentPage { get; set; }
+
     }
     public class CountryCreateViewModel
     {

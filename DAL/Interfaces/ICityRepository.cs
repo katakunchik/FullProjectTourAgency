@@ -14,6 +14,7 @@ namespace DAL.Interfaces
         City GetCityByName(string name);
         City GetCityById(int id);
         City GetCityInCountry(int countryId, string cityName);
+        int countCities();
         void SaveChange();
     }
 }

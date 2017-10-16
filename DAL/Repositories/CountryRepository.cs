@@ -37,6 +37,11 @@ namespace DAL.Repositories
             return GetAllCountries().SingleOrDefault(c => c.Name == name);
         }
 
+        public int countCountries()
+        {
+            return GetAllCountries().Count();
+        }
+
         public void SaveChange()
         {
             _context.SaveChanges();

@@ -13,6 +13,7 @@ namespace DAL.Interfaces
         IQueryable<Country> GetAllCountries();
         Country GetCountryByName(string name);
         Country GetCountryById(int id);
+        int countCountries();
         void SaveChange();
     }
 }
