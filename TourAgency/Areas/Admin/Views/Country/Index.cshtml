@@ -5,6 +5,13 @@
 }
 
 <h2>Країни</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.Partial("_ItemsOnPage", Model)
+        @Html.Partial("_CountriesSearch", Model.Search)
+    </p>
+}
 
 <p>
     @Html.ActionLink("Додати нову країну", "Create")
@@ -15,7 +22,10 @@
 @{
     string links = Html.LinksBuilder(Model.CurrentPage, Model.TotalPages, x => Url.Action("Index", "country", new
     {
-        page = x
+        page = x,
+        itemsOnPage = Model.itemsOnPage,
+        name = Model.Search.Name,
+        priority = Model.Search.Priority
     }));
 }
 

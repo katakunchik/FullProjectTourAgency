@@ -17,9 +17,9 @@ namespace TourAgency.Areas.Admin.Controllers
         }
         
         // GET: Admin/Country
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(CountrySearchViewModel search, int page = 1, int itemsOnPage = 1)
         {
-            var model = _locationService.Countries(page);
+            var model = _locationService.Countries(page, itemsOnPage, search);
             return View(model);
         }
 

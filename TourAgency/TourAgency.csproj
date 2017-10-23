@@ -223,6 +223,8 @@
     <Content Include="Areas\Admin\Views\Country\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Country\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Country\_CountriesView.cshtml" />
+    <Content Include="Areas\Admin\Views\Country\_CountriesSearch.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_ItemsOnPage.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

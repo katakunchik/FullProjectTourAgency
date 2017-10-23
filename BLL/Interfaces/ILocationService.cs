@@ -12,7 +12,7 @@ namespace BLL.Interfaces
         #region CountryPart
 
         CountryStatusViewModel CountryCreate(CountryCreateViewModel createCountry);
-        CountryIndexViewModel Countries(int page);
+        CountryIndexViewModel Countries(int page, int itemsOnPage, CountrySearchViewModel search);
         CountryStatusViewModel CountryEdit(CountryEditViewModel editCountry);
         CountryEditViewModel GetCountryEditById(int id);
 

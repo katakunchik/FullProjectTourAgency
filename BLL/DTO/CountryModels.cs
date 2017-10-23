@@ -23,8 +23,20 @@ namespace BLL.DTO
         public IEnumerable<CountryItemViewModel> Countries { get; set; }
         public int TotalPages { get; set; }
         public int  CurrentPage { get; set; }
-
+        [Display(Name = "К-сть об’єктів на сторінці")]
+        [Range(1, short.MaxValue)]
+        public int itemsOnPage { get; set; }
+        public CountrySearchViewModel Search { get; set; }
     }
+
+    public class CountrySearchViewModel
+    {
+        [Display(Name = "Назва")]
+        public string Name { get; set; }
+        [Display(Name = "Пріорітет")]
+        public string Priority { get; set; }
+    }
+
     public class CountryCreateViewModel
     {
         [Required(ErrorMessage = "Поле є обов’язковим")]

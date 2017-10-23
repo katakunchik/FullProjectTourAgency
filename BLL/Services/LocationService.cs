@@ -22,16 +22,29 @@ namespace BLL.Services
 
         #region CountryPart
 
-        public CountryIndexViewModel Countries(int page)
+        public CountryIndexViewModel Countries(int page, int itemsOnPage, CountrySearchViewModel search)
         {
-            int countItems = 1;
             int pageNumber = page - 1;
+
+            var query = _countryRepository.GetAllCountries();
+
+            if(!string.IsNullOrEmpty(search.Name))
+            {
+                query = query.Where(q => q.Name.Contains(search.Name));
+            }
+
+            if(!string.IsNullOrEmpty(search.Priority))
+            {
+                int priority;
+                int.TryParse(search.Priority, out priority);
+                query = query.Where(q => q.Priority == priority);
+            }
+            
             var model = new CountryIndexViewModel();
-            model.Countries = _countryRepository
-                .GetAllCountries()
+            model.Countries = query
                 .OrderBy(c => c.Id)
-                .Skip(countItems * pageNumber)
-                .Take(countItems)
+                .Skip(itemsOnPage * pageNumber)
+                .Take(itemsOnPage)
                 .Select(c => new CountryItemViewModel
                 {
                     Id = c.Id,
@@ -41,8 +54,10 @@ namespace BLL.Services
                 });
 
             int count = _countryRepository.countCountries();
-            model.TotalPages = (int)Math.Ceiling((double)count / countItems);
+            model.TotalPages = (int)Math.Ceiling((double)count / itemsOnPage);
             model.CurrentPage = page;
+            model.itemsOnPage = itemsOnPage;
+            model.Search = search;
 
             return model;
         }
